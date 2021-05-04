@@ -10,35 +10,21 @@ CREATE TABLE usuarios(
                       PRIMARY KEY (id_user)
 );
 CREATE TABLE artista(
-                     id_art          int     NOT NULL UNIQUE AUTO_INCREMENT ,
+                     id_artista          int     NOT NULL UNIQUE AUTO_INCREMENT ,
                      artista      VARCHAR(50) NOT NULL,
                      genero      VARCHAR(50) NOT NULL,
-                     PRIMARY KEY (id_art)
+                     PRIMARY KEY (id_artista)
 );
 CREATE TABLE cancion(
                      id_cancion        int     NOT NULL UNIQUE AUTO_INCREMENT ,
-                     artista      VARCHAR(50) NOT NULL,
-                     genero      VARCHAR(50) NOT NULL,
                      cancion      VARCHAR(50) NOT NULL,
-                     ano      DATE NOT NULL,
-                     url        varchar(60) not null,
-                     PRIMARY KEY (id_cancion)
+                     id_artista      int NOT NULL,
+                     genero      VARCHAR(50) NOT NULL,
+                     PRIMARY KEY (id_cancion),
+                     FOREIGN KEY (id_artista) REFERENCES artista(id_artista)
 );
 CREATE TABLE genero(
                      id_genero        int     NOT NULL UNIQUE AUTO_INCREMENT ,
                      genero      VARCHAR(50) NOT NULL,
                      PRIMARY KEY (id_genero)
 );
-
-/*CREATE TABLE info(
-                     id           int      NOT NULL UNIQUE AUTO_INCREMENT ,
-                     modelo       VARCHAR(50) NOT NULL,
-                     ano        YEAR NOT NULL,
-                     precio DECIMAL NOT NULL,
-                     id_marca int NOT NULL,
-                     id_tipo    int NOT NULL,
-                     PRIMARY KEY (id),
-                     FOREIGN KEY (id_marca) REFERENCES marca(id_marca),
-                     FOREIGN KEY (id_tipo) REFERENCES tipo(id_tipo)
-);
- */
