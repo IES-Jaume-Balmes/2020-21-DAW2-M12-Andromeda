@@ -6,7 +6,7 @@ CREATE TABLE usuarios(
                       nombre       VARCHAR(50) NOT NULL,
                         apellido       VARCHAR(50) NOT NULL,
                         mail       VARCHAR(50) NOT NULL,
-                     contraseña       CHAR(60) NOT NULL,
+                     contrasena       CHAR(60) NOT NULL,
                       PRIMARY KEY (id_user)
 );
 CREATE TABLE artista(
@@ -20,7 +20,7 @@ CREATE TABLE cancion(
                      artista      VARCHAR(50) NOT NULL,
                      genero      VARCHAR(50) NOT NULL,
                      cancion      VARCHAR(50) NOT NULL,
-                     año      DATE NOT NULL,
+                     ano      DATE NOT NULL,
                      url        varchar(60) not null,
                      PRIMARY KEY (id_cancion)
 );
@@ -33,7 +33,7 @@ CREATE TABLE genero(
 /*CREATE TABLE info(
                      id           int      NOT NULL UNIQUE AUTO_INCREMENT ,
                      modelo       VARCHAR(50) NOT NULL,
-                     anyo        YEAR NOT NULL,
+                     ano        YEAR NOT NULL,
                      precio DECIMAL NOT NULL,
                      id_marca int NOT NULL,
                      id_tipo    int NOT NULL,
