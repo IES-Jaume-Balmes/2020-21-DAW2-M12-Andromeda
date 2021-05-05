@@ -24,11 +24,6 @@ CREATE TABLE cancion(
                      PRIMARY KEY (id_cancion),
                      FOREIGN KEY (id_artista) REFERENCES artista(id_artista)
 );
-CREATE TABLE genero(
-                     id_genero        int     NOT NULL UNIQUE AUTO_INCREMENT ,
-                     genero      VARCHAR(50) NOT NULL,
-                     PRIMARY KEY (id_genero)
-);
 CREATE TABLE lista_repro(
     id_lista int     NOT NULL UNIQUE AUTO_INCREMENT,
 nombre_lista VARCHAR(50) NOT NULL,
