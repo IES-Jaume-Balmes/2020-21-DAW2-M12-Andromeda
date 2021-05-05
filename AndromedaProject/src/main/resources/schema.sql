@@ -4,6 +4,7 @@ USE andromeda;
 CREATE TABLE usuario(
                       id_usuario           int     NOT NULL UNIQUE AUTO_INCREMENT,
                       nombre       VARCHAR(50) NOT NULL,
+                      admin_id int,
                         apellido       VARCHAR(50) NOT NULL,
                         mail       VARCHAR(50) NOT NULL,
                      contrasena       CHAR(60) NOT NULL,
@@ -29,11 +30,19 @@ CREATE TABLE genero(
                      PRIMARY KEY (id_genero)
 );
 CREATE TABLE lista_repro(
-    id_llista int     NOT NULL UNIQUE AUTO_INCREMENT,
-nom_llista VARCHAR(50) NOT NULL,
+    id_lista int     NOT NULL UNIQUE AUTO_INCREMENT,
+nombre_lista VARCHAR(50) NOT NULL,
 id_usuario  int NOT NULL,
-data_creacio DATE NOT NULL,
+data_creacion DATE NOT NULL,
 FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
-insert into usuario(id_usuario, nombre, apellido, mail, contrasena) VALUES (null,'xavi','castellon','xav@gmail.com','456635ss');
-insert into usuario(id_usuario, nombre, apellido, mail, contrasena) VALUES (null,'david','marcos','dav@gmail.com','jjjj5ss');
+CREATE TABLE lista_detalle
+(
+    id_lista int NOT NULL,
+        id_cancion int NOT NULL,
+        FOREIGN KEY (id_lista) references lista_repro(id_lista),
+        FOREIGN KEY (id_cancion) references cancion(id_cancion)
+);
+
+insert into usuario(id_usuario, nombre, admin_id, apellido, mail, contrasena) VALUES (null,'xavi',null,'castellon','xav@gmail.com','456635ss');
+insert into usuario(id_usuario, nombre, admin_id, apellido, mail, contrasena) VALUES (null,'david',null,'marcos','dav@gmail.com','jjjj5ss');
