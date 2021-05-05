@@ -1,13 +1,13 @@
 DROP DATABASE IF EXISTS andromeda;
 CREATE DATABASE andromeda;
 USE andromeda;
-CREATE TABLE usuarios(
-                      id_user           int     NOT NULL UNIQUE AUTO_INCREMENT,
+CREATE TABLE usuario(
+                      id_usuario           int     NOT NULL UNIQUE AUTO_INCREMENT,
                       nombre       VARCHAR(50) NOT NULL,
                         apellido       VARCHAR(50) NOT NULL,
                         mail       VARCHAR(50) NOT NULL,
                      contrasena       CHAR(60) NOT NULL,
-                      PRIMARY KEY (id_user)
+                      PRIMARY KEY (id_usuario)
 );
 CREATE TABLE artista(
                      id_artista          int     NOT NULL UNIQUE AUTO_INCREMENT ,
@@ -28,3 +28,12 @@ CREATE TABLE genero(
                      genero      VARCHAR(50) NOT NULL,
                      PRIMARY KEY (id_genero)
 );
+CREATE TABLE lista_repro(
+    id_llista int     NOT NULL UNIQUE AUTO_INCREMENT,
+nom_llista VARCHAR(50) NOT NULL,
+id_usuario  int NOT NULL,
+data_creacio DATE NOT NULL,
+FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+insert into usuario(id_usuario, nombre, apellido, mail, contrasena) VALUES (null,'xavi','castellon','xav@gmail.com','456635ss');
+insert into usuario(id_usuario, nombre, apellido, mail, contrasena) VALUES (null,'david','marcos','dav@gmail.com','jjjj5ss');
