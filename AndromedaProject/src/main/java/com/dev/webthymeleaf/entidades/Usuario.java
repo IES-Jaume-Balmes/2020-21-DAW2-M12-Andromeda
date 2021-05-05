@@ -1,4 +1,4 @@
-package com.dev.entidades;
+package com.dev.webthymeleaf.entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,83 +6,64 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-
 public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private long id_usuario;
-	private int admin_id = 0;
+	
 	private String nombre;
+	private int admin_id = 0;
 	private String apellido;
 	private String mail;
-	private int contrasena;
+	private String contrasena;
 	
-	public Usuario(int admin_id, String nombre, String apellido, String mail, int contrasena) {
+	public Usuario(long id_usuario, String nombre, int admin_id, String apellido, String mail, String contrasena) {
 		super();
-		this.admin_id = admin_id;
+		this.id_usuario = id_usuario;
 		this.nombre = nombre;
+		this.admin_id = admin_id;
 		this.apellido = apellido;
 		this.mail = mail;
 		this.contrasena = contrasena;
 	}
-
-	public Usuario() {
-		
-	}
-
 	public long getId_usuario() {
 		return id_usuario;
 	}
-
 	public void setId_usuario(long id_usuario) {
 		this.id_usuario = id_usuario;
 	}
-
-	public int getAdmin_id() {
-		return admin_id;
-	}
-
-	public void setAdmin_id(int admin_id) {
-		this.admin_id = admin_id;
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
-
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
+	public int getAdmin_id() {
+		return admin_id;
+	}
+	public void setAdmin_id(int admin_id) {
+		this.admin_id = admin_id;
+	}
 	public String getApellido() {
 		return apellido;
 	}
-
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 	public String getMail() {
 		return mail;
 	}
-
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-
-	public int getContrasena() {
+	public String getContrasena() {
 		return contrasena;
 	}
-
-	public void setContrasena(int contrasena) {
+	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}
-
-	@Override
-	public String toString() {
-		return "Usuario [id_usuario=" + id_usuario + ", admin_id=" + admin_id + ", nombre=" + nombre + ", apellido="
-				+ apellido + ", mail=" + mail + ", contrasena=" + contrasena + "]";
-	}	
+	
+	
 }

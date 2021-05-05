@@ -1,4 +1,4 @@
-package com.dev.entidades;
+package com.dev.webthymeleaf.entidades;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
