@@ -1,42 +1,35 @@
 package com.dev.entidades;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
-
-public class Usuario {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
-	private long id_usuario;
-
+public class Administrador {
+	private int admin_id = 0;
 	private String nombre;
 	private String apellido;
 	private String mail;
 	private int contrasena;
 	
-	public Usuario(String nombre, String apellido, String mail, int contrasena) {
+	public Administrador(int admin_id, String nombre, String apellido, String mail, int contrasena) {
 		super();
+		this.admin_id = admin_id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.mail = mail;
 		this.contrasena = contrasena;
 	}
 
-	public Usuario() {
-
+	public Administrador() {
+		
 	}
 
-	public long getId_usuario() {
-		return id_usuario;
+	public int getAdmin_id() {
+		return admin_id;
 	}
 
-	public void setId_usuario(long id_usuario) {
-		this.id_usuario = id_usuario;
+	public void setAdmin_id(int admin_id) {
+		this.admin_id = admin_id;
 	}
 
 	public String getNombre() {
@@ -73,8 +66,8 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [id_usuario=" + id_usuario + ", nombre=" + nombre + ", apellido=" + apellido + ", mail=" + mail
-				+ ", contrasena=" + contrasena + "]";
+		return "Administrador [admin_id=" + admin_id + ", nombre=" + nombre + ", apellido=" + apellido + ", mail="
+				+ mail + ", contrasena=" + contrasena + "]";
 	}
 	
 }
