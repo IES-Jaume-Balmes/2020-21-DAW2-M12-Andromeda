@@ -28,6 +28,11 @@ public class Usuario {
 		this.mail = mail;
 		this.contrasena = contrasena;
 	}
+	
+	public Usuario() {
+		super();
+	}
+
 	public long getId_usuario() {
 		return id_usuario;
 	}
