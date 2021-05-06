@@ -33,7 +33,7 @@ public class ControladorRegistro {
 		
 		UsuarioRep.save(nuevo);
 		
-		return "redirect:/";
+		return "redirect:";
 	}
 	
 	

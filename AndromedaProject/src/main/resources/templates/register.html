@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
  
-    <title>Register</title>
-    <link href="./register.css"
+    <title>Registro</title>
+    <link href="login.css"
       rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>Registro</h1>
+
 <table>
-    <td id="tabla">
-    <form action="">
+ <div class="login-box">
+ <img src="../../img/logo1.png" class="avatar" alt="Avatar Image">
+    <form action="/guardar" th:object="${registroUsuario}" method="post">
         <label for="Nombre">Nombre:</label><br>
-        <input type="text" id="Nombre" name="Nombre"><br>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Ingresa el nombre" th:field="*{nombre}" required><br>
         <label for="lname">Last name:</label><br>
-        <input type="text" id="Apellidos" name="Apellidos"><br>
+        <input type="text" id="Apellidos" name="Apellidos" placeholder="Ingresa los apellidos" th:field="*{apellido}" required><br>
         <label for="email">Correo:</label><br>
-        <input type="text" id="Correo" name="Correo"><br>
+        <input type="text" id="Correo" name="Correo" placeholder="Ingresa el correo" th:field="*{mail}" required><br>
         <label for="Contraseña">Contraseña:</label><br>
-        <input type="Contraseña" id="Contraseña" name="Contraseña"><br><br>
+        <input type="password" id="Contraseña" name="Contraseña" placeholder="Ingresa la contraseña" th:field="*{contrasena}" required><br><br>
         <input type="submit" name="submit" id="submit" value="Enviar">
       </form> 
-    </td>
+    </div>
     </table>
 </body>
 </html>

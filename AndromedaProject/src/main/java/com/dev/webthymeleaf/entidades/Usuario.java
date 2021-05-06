@@ -19,6 +19,8 @@ public class Usuario {
 	private String mail;
 	private String contrasena;
 	
+	
+	
 	public Usuario(long id_usuario, String nombre, int admin_id, String apellido, String mail, String contrasena) {
 		super();
 		this.id_usuario = id_usuario;
