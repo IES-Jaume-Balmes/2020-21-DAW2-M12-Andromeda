@@ -12,8 +12,6 @@ _Andrómeda és una aplicación web de música dónde los usuarios podran escuch
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a crear el proyecto_
-
 * **Aarón Yllanes**  - [Aarón](https://github.com/AaronYllanes)
 * **Daniel García**  - [Daniel](https://github.com/dgarcia19jaume)
 * **Adriana Yllanes**  - [Adriana](https://github.com/AdrianaY)
@@ -26,22 +24,23 @@ Juanma Sánchez Bel
 
 ## Documentación  📖
 
-*Entrega 1 📌
+  ##Entrega 1 📌
 
 * **Back: Spring  Boot** 
-  *- Creación de todas las entidades: Usuario, Cancion, Artista, Lista_repro. 
-  *- Controlador Registro.
-  *- Controlador Login (en desarrollo).
-  *- Repositorio de la clase Usuario.
-  *- Creación del registro y login (en desarrollo).
-  *- Spring security: se ha creado el archivo de configuración que cifra usuario y admin (en desarrollo).
+  *Creación de todas las entidades: Usuario, Cancion, Artista, Lista_repro. 
+  *Controlador Registro.
+  *Controlador Login (en desarrollo).
+  *Repositorio de la clase Usuario.
+  *Creación del registro y login (en desarrollo).
+  *Spring security: se ha creado el archivo de configuración que cifra usuario y admin (en desarrollo).
 
 * **Front: React** 
 
 * **SQL: Spring Hibernate** 
-  *- Relación entre tablas (desarrollo).
+  *Relación entre tablas (desarrollo).
 
 * **Front: Bootstrap** 
-  *- Landing page con css (Responsive).
-  *- Registro con css..
-  *- Login con css.
+  *Landing page con css (Responsive).
+  *Registro con css..
+  *Login con css.
+
