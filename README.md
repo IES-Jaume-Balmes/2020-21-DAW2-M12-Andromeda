@@ -23,3 +23,25 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 ## Tutor 📄
 
 Juanma Sánchez Bel
+
+## Documentación  📖
+
+*Entrega 1 📌
+
+* **Back: Spring  Boot** 
+  *- Creación de todas las entidades: Usuario, Cancion, Artista, Lista_repro. 
+  *- Controlador Registro.
+  *- Controlador Login (en desarrollo).
+  *- Repositorio de la clase Usuario.
+  *- Creación del registro y login (en desarrollo).
+  *- Spring security: se ha creado el archivo de configuración que cifra usuario y admin (en desarrollo).
+
+* **Front: React** 
+
+* **SQL: Spring Hibernate** 
+  *- Relación entre tablas (desarrollo).
+
+* **Front: Bootstrap** 
+  *- Landing page con css (Responsive).
+  *- Registro con css..
+  *- Login con css.
