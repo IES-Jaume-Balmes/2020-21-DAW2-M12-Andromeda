@@ -1,4 +1,4 @@
-package com.dev.webthymeleaf;
+/*package com.dev.webthymeleaf;
 
 import javax.sql.DataSource;
 
@@ -28,4 +28,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.authoritiesByUsernameQuery("");//añadir consulta
 		
 	}
-}
+}*/
