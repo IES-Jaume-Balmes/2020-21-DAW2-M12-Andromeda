@@ -1,21 +1,25 @@
-#Andrómeda
+# Andrómeda
 
-##*Participants*
+_Andrómeda és una aplicación web de música dónde los usuarios podran escuchar su música favorita, crear listas de canciones y compartirla con amigos._
 
-***
 
-*Adriana Yllanes Álvarez
-*Daniel Garcia Álvarez
-*Aarón Yllanes Álvarez
+## Construido con 🛠️
 
-***
+* [Spring Boot](https://spring.io/) - Back
+* [React](https://reactjs.org/) - Front
+* [SQL](https://www.mysql.com/) - Base de datos
+* [Bootstrap](https://getbootstrap.com/) - Front
 
-##Tutor
-*Juanma Sánchez Bel
+## Autores ✒️
 
-***
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-##Documentación
-*[BACK-END]:https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/BACK-END
-*[FRONT-END]:https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/FRONT-END
-*[SQL]:https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/SQL
+* **Aarón Yllanes**  - [Aarón](https://github.com/AaronYllanes)
+* **Daniel García**  - [Daniel](https://github.com/dgarcia19jaume)
+* **Adriana Yllanes**  - [Adriana](https://github.com/AdrianaY)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+
+## Tutor 📄
+
+Juanma Sánchez Bel
