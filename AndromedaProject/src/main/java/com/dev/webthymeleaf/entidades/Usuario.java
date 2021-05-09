@@ -1,5 +1,6 @@
 package com.dev.webthymeleaf.entidades;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,31 +11,35 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private long id_usuario;
 	
 	private String nombre;
-	private int admin_id = 0;
+	@Column(nullable = true)
+	private long admin_id;
 	private String apellido;
 	private String mail;
 	private String contrasena;
 	
 	
 	
-	public Usuario(long id_usuario, String nombre, int admin_id, String apellido, String mail, String contrasena) {
+	
+	public Usuario(String nombre, long admin_id, String apellido, String mail, String contrasena) {
 		super();
-		this.id_usuario = id_usuario;
 		this.nombre = nombre;
 		this.admin_id = admin_id;
 		this.apellido = apellido;
 		this.mail = mail;
 		this.contrasena = contrasena;
 	}
-	
-	public Usuario() {
+	public Usuario(String nombre, String apellido, String mail, String contrasena) {
 		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.mail = mail;
+		this.contrasena = contrasena;
 	}
-
+	public Usuario() {
+	}
 	public long getId_usuario() {
 		return id_usuario;
 	}
@@ -47,10 +52,10 @@ public class Usuario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getAdmin_id() {
+	public long getAdmin_id() {
 		return admin_id;
 	}
-	public void setAdmin_id(int admin_id) {
+	public void setAdmin_id(long admin_id) {
 		this.admin_id = admin_id;
 	}
 	public String getApellido() {
@@ -71,6 +76,12 @@ public class Usuario {
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}
+	@Override
+	public String toString() {
+		return "Usuario [id_usuario=" + id_usuario + ", nombre=" + nombre + ", admin_id=" + admin_id + ", apellido="
+				+ apellido + ", mail=" + mail + ", contrasena=" + contrasena + "]";
+	}
+	
 	
 	
 }
