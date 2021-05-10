@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.dev.webthymeleaf.entidades.Usuario;
+import com.dev.webthymeleaf.entidades.Cancion;
 
 
 
-public interface RepositorioUsuario extends JpaRepository<Usuario,Long>{
+public interface RepositorioCancion extends JpaRepository<Cancion,Long>{
 
 }

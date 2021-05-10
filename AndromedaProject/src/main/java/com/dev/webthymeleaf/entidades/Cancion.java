@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -20,7 +21,6 @@ import javax.persistence.Table;
 public class Cancion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private long id_cancion;
 	
 	private String cancion;
@@ -35,7 +35,6 @@ public class Cancion {
 	joinColumns = @JoinColumn(name = "id_cancion"), 
 	inverseJoinColumns = @JoinColumn(name = "id_artista"))
 	private List<Artista> artistas;
-	
 	
 	public Cancion(String cancion, String genero) {
 		super();
