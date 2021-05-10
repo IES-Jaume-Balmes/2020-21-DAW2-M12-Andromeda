@@ -1,6 +1,7 @@
-insert into usuario(nombre,apellido, mail, contrasena) VALUES ('xavi','castellon','xav@gmail.com','456635');
-insert into usuario(nombre,apellido, mail, contrasena) VALUES ('david','marcos','dav@gmail.com','67667');
-insert into usuario(nombre,apellido,admin_id, mail, contrasena) VALUES ('david','marcos',0,'dav@gmail.com','67667');
+insert into usuario(nombre,apellido, mail, contrasena) VALUES ('Aaron','Yllanes','jaumebalmes@net','admin');
+insert into usuario(nombre,apellido, mail, contrasena) VALUES ('Adriana','Yllanes','jaumebalmes@net','admin');
+insert into usuario(nombre,apellido, mail, contrasena) VALUES ('Dani','Garcia','jaumebalmes@net','admin');
+insert into usuario(nombre,apellido, mail, contrasena) VALUES ('invitao','ole','regnum@net','user');
 
 
 insert into artista (artista)values('deftones');
@@ -11,4 +12,8 @@ insert into cancion(cancion,genero)values('bymyself','rock');
 
 insert into lista_repro(nombre_lista)values('rock de los 2000');
 
+insert into roles(rol,id_usuario)values('admin',1);
+insert into roles(rol,id_usuario)values('admin',2);
+insert into roles(rol,id_usuario)values('admin',3);
+insert into roles(rol,id_usuario)values('user',4);
 

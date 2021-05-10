@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -25,6 +26,10 @@ public class Usuario {
 	
 	@ManyToMany(mappedBy = "usuarios")
 	private List<Lista_repro> lista;
+	
+	@OneToMany(mappedBy="user_rol")
+	private List<Roles> roles;
+
 	
 	public Usuario(String nombre, String apellido, String mail, String contrasena,
 			List<Lista_repro> lista) {
@@ -59,6 +64,18 @@ public class Usuario {
 		this.apellido = apellido;
 		this.mail = mail;
 		this.contrasena = contrasena;
+	}
+	
+	public Usuario(String nombre, long admin_id, String apellido, String mail, String contrasena,
+			List<Lista_repro> lista, List<Roles> roles) {
+		super();
+		this.nombre = nombre;
+		this.admin_id = admin_id;
+		this.apellido = apellido;
+		this.mail = mail;
+		this.contrasena = contrasena;
+		this.lista = lista;
+		this.roles = roles;
 	}
 	public Usuario() {
 	}
@@ -97,6 +114,18 @@ public class Usuario {
 	}
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
+	}
+	public List<Lista_repro> getLista() {
+		return lista;
+	}
+	public void setLista(List<Lista_repro> lista) {
+		this.lista = lista;
+	}
+	public List<Roles> getRoles() {
+		return roles;
+	}
+	public void setRoles(List<Roles> roles) {
+		this.roles = roles;
 	}
 	@Override
 	public String toString() {
