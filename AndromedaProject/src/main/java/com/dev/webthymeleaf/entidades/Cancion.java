@@ -22,7 +22,7 @@ public class Cancion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id_cancion;
-	
+	private String url;
 	private String cancion;
 	private String genero;
 	
@@ -45,11 +45,12 @@ public class Cancion {
 	}
 	
 	
-	public Cancion(String cancion, String genero, List<Artista> artistas) {
+	public Cancion(String cancion, String genero, List<Artista> artistas, String url) {
 		super();
 		this.cancion = cancion;
 		this.genero = genero;
 		this.artistas = artistas;
+		this.url = url;
 	}
 	
 	public List<Artista> getArtistas() {
@@ -64,6 +65,7 @@ public class Cancion {
 	public void setId_cancion(long id_cancion) {
 		this.id_cancion = id_cancion;
 	}
+
 	public String getCancion() {
 		return cancion;
 	}
@@ -76,11 +78,18 @@ public class Cancion {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	@Override
 	public String toString() {
-		return "Cancion [id_cancion=" + id_cancion + ", cancion=" + cancion + ", genero=" + genero + ", artistas="
-				+ artistas + "]";
+		return "Cancion [id_cancion=" + id_cancion + ", url=" + url + ", cancion=" + cancion + ", genero=" + genero
+				+ ", artistas=" + artistas + "]";
 	}
+
 	
 	
 }
