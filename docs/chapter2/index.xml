@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entrega 1 on Andrómeda</title>
+    <link>http://example.org/chapter2/</link>
+    <description>Recent content in Entrega 1 on Andrómeda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-es</language>
+    <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="http://example.org/chapter2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Back: Spring Boot</title>
+      <link>http://example.org/chapter2/1_back/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/chapter2/1_back/</guid>
+      <description> Creación de todas las entidades: Usuario, Cancion, Artista, Lista_repro. Controlador Registro. Controlador Login (en desarrollo). Repositorio de la clase Usuario. Creación del registro y login (en desarrollo). Spring security: se ha creado el archivo de configuración que cifra usuario y admin (en desarrollo).  </description>
+    </item>
+    
+    <item>
+      <title>Diagrama de clases</title>
+      <link>http://example.org/chapter2/2_diagrama/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/chapter2/2_diagrama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Front: Bootstrap</title>
+      <link>http://example.org/chapter2/frontbootstrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/chapter2/frontbootstrap/</guid>
+      <description> Landing page con css (Responsive). Registro con css. Login con css.  </description>
+    </item>
+    
+    <item>
+      <title>Front: React</title>
+      <link>http://example.org/chapter2/front/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/chapter2/front/</guid>
+      <description> Pendiente de desarrollo.  </description>
+    </item>
+    
+    <item>
+      <title>SQL: Spring Hibernate</title>
+      <link>http://example.org/chapter2/sql_spring-hibernate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/chapter2/sql_spring-hibernate/</guid>
+      <description>  Creación de las tablas:
+ Artista. Canción. lista_repro. lista_detalle.    Creada la relacion entre la tabla artista y canción.
+  </description>
+    </item>
+    
+  </channel>
+</rss>
