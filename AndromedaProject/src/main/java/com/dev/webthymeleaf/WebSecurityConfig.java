@@ -30,7 +30,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 	}
 	
-	
 	@Autowired
 	public void configurerSecurityGlobal(AuthenticationManagerBuilder builder) throws Exception {
 		builder.jdbcAuthentication()
