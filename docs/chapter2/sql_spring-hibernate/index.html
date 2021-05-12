@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-es">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>SQL: Spring Hibernate - Andrómeda</title>
+<meta name="description" content="App web ">
+<meta name="generator" content="Hugo 0.83.1" />
+<link href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/sql_spring-hibernate/">
+<link rel="stylesheet" href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="SQL: Spring Hibernate" />
+<meta property="og:description" content="  Creación de las tablas:
+ Artista. Canción. lista_repro. lista_detalle.    Creada la relacion entre la tabla artista y canción.
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/sql_spring-hibernate/" /><meta property="og:image" content="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/images/og-image.png"/><meta property="article:section" content="chapter2" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/images/og-image.png"/>
+
+<meta name="twitter:title" content="SQL: Spring Hibernate"/>
+<meta name="twitter:description" content="  Creación de las tablas:
+ Artista. Canción. lista_repro. lista_detalle.    Creada la relacion entre la tabla artista y canción.
+  "/>
+<meta itemprop="name" content="SQL: Spring Hibernate">
+<meta itemprop="description" content="  Creación de las tablas:
+ Artista. Canción. lista_repro. lista_detalle.    Creada la relacion entre la tabla artista y canción.
+  ">
+
+<meta itemprop="wordCount" content="17"><meta itemprop="image" content="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Andrómeda</h1><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda" class="github"><i class="fab fa-github"></i></a>
+<p class="description">App web </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/">Home</a></li>
+<li><a href="https://twitter.com/">Twitter</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>SQL: Spring Hibernate</h1>
+<ul>
+<li>
+<p>Creación de las tablas:</p>
+<ul>
+<li>Artista.</li>
+<li>Canción.</li>
+<li>lista_repro.</li>
+<li>lista_detalle.</li>
+</ul>
+</li>
+<li>
+<p>Creada la relacion entre la tabla artista y canción.</p>
+</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/front/" title="Front: React"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Front: React</a>
+<a class="nav nav-next" href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/1_back/" title="Back: Spring Boot">Next - Back: Spring Boot <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git">Home</a></li>
+
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter1/">Entrega 0</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter1/2_arquitectura/">Arquitectura de la aplicación</a></li>
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter1/4_funcionamiento/">Funcionamiento</a></li>
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter1/1_herramientas/">Herramientas</a></li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/">Entrega 1</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/1_back/">Back: Spring Boot</a></li>
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/2_diagrama/">Diagrama de clases</a></li>
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/frontbootstrap/">Front: Bootstrap</a></li>
+<li class=""><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/front/">Front: React</a></li>
+<li class="active"><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda.git/chapter2/sql_spring-hibernate/">SQL: Spring Hibernate</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
