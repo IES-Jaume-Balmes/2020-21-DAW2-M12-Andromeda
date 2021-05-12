@@ -17,3 +17,5 @@ insert into roles(rol,id_usuario)values('admin',1);
 insert into roles(rol,id_usuario)values('admin',2);
 insert into roles(rol,id_usuario)values('admin',3);
 insert into roles(rol,id_usuario)values('user',4);
+
+
