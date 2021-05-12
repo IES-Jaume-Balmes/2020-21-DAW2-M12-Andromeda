@@ -1,4 +1,4 @@
-package com.dev.webthymeleaf;
+/*package com.dev.webthymeleaf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,4 +14,4 @@ public class MvcConfig implements WebMvcConfigurer {
 	}
 	
 	
-}
+}*/
