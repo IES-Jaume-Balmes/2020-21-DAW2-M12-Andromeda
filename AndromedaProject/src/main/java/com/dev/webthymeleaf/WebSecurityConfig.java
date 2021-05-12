@@ -39,7 +39,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.usersByUsernameQuery("SELECT nombre, contrasena,'true' FROM usuario WHERE nombre =?")
 		.authoritiesByUsernameQuery("SELECT u.nombre, r.rol FROM roles r INNER JOIN usuario u ON u.id_usuario = r.id_rol WHERE u.nombre=?");
 		
-	}
-
-	
+	}	
 }
