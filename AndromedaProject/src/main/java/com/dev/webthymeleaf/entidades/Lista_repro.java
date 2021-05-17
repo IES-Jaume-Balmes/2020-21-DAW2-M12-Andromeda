@@ -38,7 +38,7 @@ public class Lista_repro {
 	@JoinTable(name = "LISTA_DETALLE", 
 	joinColumns = @JoinColumn(name = "id_lista"), 
 	inverseJoinColumns = @JoinColumn(name = "id_usuario"))
-	private List<Usuario> usuarios;
+	private List<User> usuarios;
 
 	public Lista_repro(String nombre_lista, Date data_creacionDate) {
 		super();
@@ -46,7 +46,7 @@ public class Lista_repro {
 		this.data_creacionDate = data_creacionDate;
 	}
 
-	public Lista_repro(String nombre_lista, Date data_creacionDate, List<Usuario> usuarios) {
+	public Lista_repro(String nombre_lista, Date data_creacionDate, List<User> usuarios) {
 		super();
 		this.nombre_lista = nombre_lista;
 		this.data_creacionDate = data_creacionDate;
@@ -77,11 +77,11 @@ public class Lista_repro {
 		this.data_creacionDate = data_creacionDate;
 	}
 
-	public List<Usuario> getUsuarios() {
+	public List<User> getUsuarios() {
 		return usuarios;
 	}
 
-	public void setUsuarios(List<Usuario> usuarios) {
+	public void setUsuarios(List<User> usuarios) {
 		this.usuarios = usuarios;
 	}
 
