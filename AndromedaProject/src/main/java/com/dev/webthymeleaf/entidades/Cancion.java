@@ -15,6 +15,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 
@@ -34,6 +36,7 @@ public class Cancion {
 	@JoinTable(name = "CANCION_ARTISTA", 
 	joinColumns = @JoinColumn(name = "id_cancion"), 
 	inverseJoinColumns = @JoinColumn(name = "id_artista"))
+	@JsonIgnore
 	private List<Artista> artistas;
 	
 	public Cancion(String cancion, String genero) {

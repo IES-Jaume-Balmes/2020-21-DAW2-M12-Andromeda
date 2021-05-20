@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 
 public class Artista {
@@ -21,6 +23,7 @@ public class Artista {
 	
 	private String artista;
 	@ManyToMany(mappedBy = "artistas")
+	@JsonIgnore
 	private List<Cancion> canciones;
 	
 	
