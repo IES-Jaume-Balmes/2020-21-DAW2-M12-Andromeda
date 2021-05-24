@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-es">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Funcionamiento - Andrómeda</title>
+<meta name="description" content="App web ">
+<meta name="generator" content="Hugo 0.83.1" />
+<link href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/4_funcionamiento/">
+<link rel="stylesheet" href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Funcionamiento" />
+<meta property="og:description" content="Dos perfiles de usuario, el normal y el administrador. Usuario: Registro: el usuario podrá registrarse. Baja: el usuario podrá darse de baja del servicio. Login: una vez registrado puede loguearse. Logout: un usuario puede desconectarse. El usuario podrá acceder a su panel de control. Red social de Andrómeda embedded. Correo electrónico al completar el registro. Música: Buscar: el usuario puede buscar canciones. Crear: un usuario puede subir música a Andrómeda." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/4_funcionamiento/" /><meta property="og:image" content="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/images/og-image.png"/><meta property="article:section" content="chapter1" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/images/og-image.png"/>
+
+<meta name="twitter:title" content="Funcionamiento"/>
+<meta name="twitter:description" content="Dos perfiles de usuario, el normal y el administrador. Usuario: Registro: el usuario podrá registrarse. Baja: el usuario podrá darse de baja del servicio. Login: una vez registrado puede loguearse. Logout: un usuario puede desconectarse. El usuario podrá acceder a su panel de control. Red social de Andrómeda embedded. Correo electrónico al completar el registro. Música: Buscar: el usuario puede buscar canciones. Crear: un usuario puede subir música a Andrómeda."/>
+<meta itemprop="name" content="Funcionamiento">
+<meta itemprop="description" content="Dos perfiles de usuario, el normal y el administrador. Usuario: Registro: el usuario podrá registrarse. Baja: el usuario podrá darse de baja del servicio. Login: una vez registrado puede loguearse. Logout: un usuario puede desconectarse. El usuario podrá acceder a su panel de control. Red social de Andrómeda embedded. Correo electrónico al completar el registro. Música: Buscar: el usuario puede buscar canciones. Crear: un usuario puede subir música a Andrómeda.">
+
+<meta itemprop="wordCount" content="175"><meta itemprop="image" content="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Andrómeda</h1><a href="https://github.com/IES-Jaume-Balmes/2020-21-DAW2-M12-Andromeda" class="github"><i class="fab fa-github"></i></a>
+<p class="description">App web </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/2020-21-DAW2-M12-Andromeda/">Home</a></li>
+<li><a href="https://twitter.com/">Twitter</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Funcionamiento</h1>
+<ul>
+<li>Dos perfiles de usuario, el normal y el administrador.</li>
+<li>Usuario:</li>
+<li>Registro: el usuario podrá registrarse.</li>
+<li>Baja: el usuario podrá darse de baja del servicio.</li>
+<li>Login: una vez registrado puede loguearse.</li>
+<li>Logout: un usuario puede desconectarse.</li>
+<li>El usuario podrá acceder a su panel de control.</li>
+<li>Red social de Andrómeda embedded.</li>
+<li>Correo electrónico al completar el registro.</li>
+<li>Música:</li>
+<li>Buscar: el usuario puede buscar canciones.</li>
+<li>Crear: un usuario puede subir música a Andrómeda.</li>
+<li>Modificar subidas: un usuario puede modificar sus subidas.</li>
+<li>Modificar y borrar.</li>
+<li>Listas de música:</li>
+<li>Crear: el usuario puede crear listas públicas y privadas.</li>
+<li>Borrar propias: el usuario puede borrar sus listas.</li>
+<li>Listar propias.</li>
+<li>Guardar listas de otros usuarios.</li>
+<li>Modificar listas propias.</li>
+<li>Añadir a tus listas.</li>
+<li>Quitar de tus listas.</li>
+<li>Buscar en listas.</li>
+<li>Administrador:</li>
+<li>Usuarios: CRUD (Create, Read, Update, Delete)</li>
+<li>Listar usuarios</li>
+<li>Crear usuarios</li>
+<li>Modificar usuarios</li>
+<li>Borrar usuarios</li>
+<li>Música: CRUD</li>
+<li>Listar</li>
+<li>Crear</li>
+<li>Modificar</li>
+<li>Borrar</li>
+<li>Listas: CRUD</li>
+<li>Listar</li>
+<li>Crear</li>
+<li>Modificar</li>
+<li>Borrar</li>
+<li>Añadir música a una lista</li>
+<li>Quitar música a una lista</li>
+<li>Hacer que un usuario siga una lista</li>
+<li>Hacer que un usuario deje de seguir una lista</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/2_arquitectura/" title="Arquitectura de la aplicación"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Arquitectura de la aplicación</a>
+<a class="nav nav-next" href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/1_herramientas/" title="Herramientas">Next - Herramientas <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/">Home</a></li>
+
+<li class="parent"><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/">Entrega 0</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/2_arquitectura/">Arquitectura de la aplicación</a></li>
+<li class="active"><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/4_funcionamiento/">Funcionamiento</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/1_herramientas/">Herramientas</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/">Entrega 1</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/1_back/">Back: Spring Boot</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/2_diagrama/">Diagrama de clases</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/frontbootstrap/">Front: Bootstrap</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/front/">Front: React</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/sql_spring-hibernate/">SQL: Spring Hibernate</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/">Entrega 2</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/1_back2/">Back: Spring Boot</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/2_diagrama2/">Diagrama de clases</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/frontbootstrap2/">Front: Bootstrap</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/front2/">Front: React</a></li>
+<li class=""><a href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/sql_spring-hibernate/">SQL: Spring Hibernate</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
