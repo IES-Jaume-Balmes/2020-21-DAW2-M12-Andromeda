@@ -12,6 +12,6 @@ import com.dev.webthymeleaf.entidades.Cancion;
 
 @Repository
 public interface RepositorioCancion extends JpaRepository<Cancion,Long>{
-	@Query(value = "SELECT u.artista,u.id_artista, r.genero , r.cancion FROM cancion r INNER JOIN artista u ON u.id_artista= r.id_cancion", nativeQuery = true)
+	@Query(value = "select cancion, artista from cancion c, artista a, cancion_artista ca where c.id_cancion=ca.id_cancion and ca.id_artista=a.id_artista order by c.cancion;", nativeQuery = true)
     public List<CancionArtistaDto> findByCancionArtistaDtos();
 }
