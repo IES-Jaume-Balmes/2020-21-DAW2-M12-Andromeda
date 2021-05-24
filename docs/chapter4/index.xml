@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entrega 3 on Andrómeda</title>
+    <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/</link>
+    <description>Recent content in Entrega 3 on Andrómeda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-es</language><atom:link href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Back: Spring Boot</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/1_back2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/1_back2/</guid>
+      <description>Arreglado: modificada la query que proporciona la información de la api, no se podían filtar todos los datos. Arreglado: modificado repositorio canción añadido anotación jsonIgnore, para evitar que los valores se multipliquen en la consultas a la base de datos. Arreglado: ahora el registro de usuarios y el login funcionan correctamente. Control de errores en el login: añadido notificacion al introducir credenciales erroneas. Login: añadido mensaje al iniciar sesión en la página.</description>
+    </item>
+    
+    <item>
+      <title>Diagrama de clases</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/2_diagrama2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/2_diagrama2/</guid>
+      <description> No hay modificaciones en la base de datos.  </description>
+    </item>
+    
+    <item>
+      <title>Front: Bootstrap</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/frontbootstrap2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/frontbootstrap2/</guid>
+      <description> Añadido css para el front.  </description>
+    </item>
+    
+    <item>
+      <title>Front: React</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/front2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/front2/</guid>
+      <description>Añadidas 75 canciones mp3 a la carpeta media. Favoritos: creación del apartado donde el usuario podrá añadir sus canciones preferidas. Favoritos: ahora el usuario podrá además de añadir eliminar las canciones que quiera en este apartado. Añadido: ahora el usuario podrá añadir las canciones a una o varias listas propias. Añadido: reproductor de música. Lista de canciones: por el momento solo funciona la reprodución de canciones introducidas a mano en el archivo media, pendiente conectar con nuestra api para poder listar todas las canciones.</description>
+    </item>
+    
+    <item>
+      <title>SQL: Spring Hibernate</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/sql_spring-hibernate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/sql_spring-hibernate/</guid>
+      <description> Añadidas 75 inserts de canciones en el archivo data.sql  </description>
+    </item>
+    
+  </channel>
+</rss>
