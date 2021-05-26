@@ -16,7 +16,7 @@ import com.dev.webthymeleaf.dao.RepositorioCancion;
 import com.dev.webthymeleaf.entidades.Artista;
 import com.dev.webthymeleaf.entidades.Cancion;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/")
 public class ControladorCancion {
