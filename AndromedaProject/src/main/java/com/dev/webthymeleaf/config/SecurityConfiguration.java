@@ -39,13 +39,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(authenticationProvider());
     }
 	
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.cors().and().authorizeRequests().antMatchers(
 				 "/registration**",
 	                "/js/**",
 	                "/css/**",
-	                "/img/**").permitAll()
+	                "/img/**",
+	                "/api/canciones",
+	                "/api/artistas").permitAll()
 		.anyRequest().authenticated()
 		.and()
 		.formLogin()
