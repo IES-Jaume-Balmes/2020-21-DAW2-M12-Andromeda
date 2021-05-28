@@ -7,7 +7,6 @@ public interface CancionArtistaDto {
 	public String getGenero();
 	
 	public String getArtista();
-		
 	
-	
+	public String getUrl();
 }
