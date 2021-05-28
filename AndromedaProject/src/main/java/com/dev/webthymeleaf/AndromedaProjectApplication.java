@@ -24,7 +24,7 @@ public class AndromedaProjectApplication{ //implements CommandLineRunner {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedMethods("GET","POST");
+				registry.addMapping("/**").allowedMethods("GET","PUT","HEAD","POST").allowCredentials(true).allowedOriginPatterns("http://127.0.0.1:5500");
 			}
 		};
 	}

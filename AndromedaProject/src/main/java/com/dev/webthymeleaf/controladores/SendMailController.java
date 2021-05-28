@@ -23,6 +23,6 @@ public class SendMailController {
         String message = body +"\n\n Datos de contacto: " + "\nNombre: " + name + "\nE-mail: " + mail;
         sendMailService.sendMail("andromedadaw@gmail.com", "andromedadaw@gmail.com" ,subject,message);
 
-        return "send_mail_view";
+        return "index";
     }
 }

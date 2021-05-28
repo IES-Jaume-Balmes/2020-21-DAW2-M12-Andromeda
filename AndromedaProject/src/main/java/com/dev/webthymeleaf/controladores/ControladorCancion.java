@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.webthumeleaf.dto.CancionArtistaDto;
@@ -16,9 +17,9 @@ import com.dev.webthymeleaf.dao.RepositorioCancion;
 import com.dev.webthymeleaf.entidades.Artista;
 import com.dev.webthymeleaf.entidades.Cancion;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RestController
-@RequestMapping("/api/")
+@RequestMapping(value="/api",produces="application/json", method = {RequestMethod.GET, RequestMethod.PUT,RequestMethod.HEAD,RequestMethod.POST})
 public class ControladorCancion {
 
 	@Autowired
