@@ -81,7 +81,7 @@ public class Cancion {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public String getUrl() {
+	public String getUrl() {	
 		return url;
 	}
 	public void setUrl(String url) {
