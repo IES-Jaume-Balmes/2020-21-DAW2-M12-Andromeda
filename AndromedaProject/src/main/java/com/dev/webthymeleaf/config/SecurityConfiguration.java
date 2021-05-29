@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import com.dev.webthymeleaf.servicios.UserService;
@@ -31,6 +32,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
         auth.setUserDetailsService(userService);
         auth.setPasswordEncoder(passwordEncoder());
+      
+        
         return auth;
     }
 	
@@ -42,11 +45,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		//http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
+		
 		http.cors().and().authorizeRequests().antMatchers(
 				 "/registration**",
 	                "/js/**",
 	                "/css/**",
 	                "/img/**",
+	                "/lista/**",
 	                "/api/**").permitAll()
 		.anyRequest().authenticated()
 		.and()
@@ -60,6 +66,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		.logoutSuccessUrl("/login?logout")
 		.permitAll();
+		
+		
+		
+	
+		
 	}
 
 }
