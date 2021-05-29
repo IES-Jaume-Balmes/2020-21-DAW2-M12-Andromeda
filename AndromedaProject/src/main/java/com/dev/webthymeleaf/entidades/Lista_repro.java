@@ -63,6 +63,9 @@ public class Lista_repro {
 		this.usuarios = usuarios;
 		this.canciones=canciones;
 	}
+	public Lista_repro() {
+		
+	}
 	public long getId_lista() {
 		return id_lista;
 	}
