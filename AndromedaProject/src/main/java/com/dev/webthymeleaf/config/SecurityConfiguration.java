@@ -27,7 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 	
 	@Bean
-    public DaoAuthenticationProvider authenticationProvider() {
+    public DaoAuthenticationProvider authenticationProvider() { //ESTEEEE
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
         auth.setUserDetailsService(userService);
         auth.setPasswordEncoder(passwordEncoder());
@@ -47,8 +47,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	                "/js/**",
 	                "/css/**",
 	                "/img/**",
-	                "/api/canciones",
-	                "/api/artistas").permitAll()
+	                "/api/**").permitAll()
 		.anyRequest().authenticated()
 		.and()
 		.formLogin()

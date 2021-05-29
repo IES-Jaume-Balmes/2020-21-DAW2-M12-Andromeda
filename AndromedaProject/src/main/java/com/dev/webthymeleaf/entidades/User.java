@@ -1,6 +1,7 @@
 package com.dev.webthymeleaf.entidades;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,6 +14,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.JoinColumn;
 
 @Entity
@@ -43,6 +47,10 @@ public class User {
 	
 	private Collection<Role> roles;
 	
+	@ManyToMany(mappedBy = "canciones")
+	@JsonIgnore
+	private List<Lista_repro> lista;
+
 	public User() {
 		
 	}
@@ -55,6 +63,16 @@ public class User {
 		this.password = password;
 		this.roles = roles;
 	}
+	
+	public User(String firstName, String lastName, String email, String password, List<Lista_repro> lista) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.lista = lista;
+	}
+
 	public Long getId() {
 		return id;
 	}

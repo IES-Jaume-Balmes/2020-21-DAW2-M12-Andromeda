@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.TemporalType;
 import javax.xml.crypto.Data;
 
@@ -39,20 +40,29 @@ public class Lista_repro {
 	joinColumns = @JoinColumn(name = "id_lista"), 
 	inverseJoinColumns = @JoinColumn(name = "id_usuario"))
 	private List<User> usuarios;
+	
+	@ManyToMany(cascade = { CascadeType.DETACH, 
+			CascadeType.MERGE, 
+			CascadeType.REFRESH,
+						CascadeType.PERSIST }, 
+			fetch = FetchType.LAZY)
+	@JoinTable(name = "LISTA_CANCION", 
+	joinColumns = @JoinColumn(name = "id_lista"), 
+	inverseJoinColumns = @JoinColumn(name = "id_cancion"))
+	private List<Cancion> canciones;
 
 	public Lista_repro(String nombre_lista, Date data_creacionDate) {
 		super();
 		this.nombre_lista = nombre_lista;
 		this.data_creacionDate = data_creacionDate;
 	}
-
-	public Lista_repro(String nombre_lista, Date data_creacionDate, List<User> usuarios) {
+	public Lista_repro(String nombre_lista, Date data_creacionDate, List<User> usuarios,List<Cancion> canciones) {
 		super();
 		this.nombre_lista = nombre_lista;
 		this.data_creacionDate = data_creacionDate;
 		this.usuarios = usuarios;
+		this.canciones=canciones;
 	}
-
 	public long getId_lista() {
 		return id_lista;
 	}
@@ -85,6 +95,12 @@ public class Lista_repro {
 		this.usuarios = usuarios;
 	}
 
+	public List<Cancion> getCanciones() {
+		return canciones;
+	}
+	public void setCanciones(List<Cancion> canciones) {
+		this.canciones = canciones;
+	}
 	@Override
 	public String toString() {
 		return "Lista_repro [id_lista=" + id_lista + ", nombre_lista=" + nombre_lista + ", data_creacion="
