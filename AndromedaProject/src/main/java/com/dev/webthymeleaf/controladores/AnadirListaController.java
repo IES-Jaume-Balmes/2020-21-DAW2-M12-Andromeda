@@ -21,21 +21,14 @@ import com.dev.webthymeleaf.entidades.Lista_repro;
 
 @CrossOrigin(origins = "http://127.0.0.1:5500")
 @Controller
-@RequestMapping(value = "/lista", produces = "application/json", method = { RequestMethod.GET, RequestMethod.PUT,
+
+@RequestMapping(value = "/lista",  method = { RequestMethod.GET, RequestMethod.PUT,
 		RequestMethod.HEAD, RequestMethod.POST })
 public class AnadirListaController {
 
 	@Autowired
 	private RepositorioLista listaRep;
 
-
-	@Autowired
-	
-	@GetMapping("/mostrar")
-	public List<ListaDto> getAllCancion(){
-		return listaRep.findByNombreLista();
-	}
-	
 
 	@GetMapping("/newList")
 	public String displayListForm(Model model) {
