@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dev.webthumeleaf.dto.CancionArtistaDto;
+import com.dev.webthumeleaf.dto.ListaDto;
+import com.dev.webthymeleaf.dao.RepositorioCancion;
 import com.dev.webthymeleaf.dao.RepositorioLista;
 
 import com.dev.webthymeleaf.entidades.Lista_repro;
@@ -25,11 +28,13 @@ public class AnadirListaController {
 	@Autowired
 	private RepositorioLista listaRep;
 
-	@GetMapping("/add")
-	public List<Lista_repro> get() {
-		return listaRep.findAll();
-	}
 
+	@Autowired
+	
+	@GetMapping("/mostrar")
+	public List<ListaDto> getAllCancion(){
+		return listaRep.findByNombreLista();
+	}
 	
 
 	@GetMapping("/newList")
@@ -43,6 +48,9 @@ public class AnadirListaController {
 	public String createList(Lista_repro lista, Model model) {
 		listaRep.save(lista);
 		return "redirect:http://127.0.0.1:5500/index.html";
+		
+		
+		
 
 	}
 

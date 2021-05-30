@@ -36,5 +36,4 @@ public class ControladorCancion {
 	public List<Artista> getAllartista(){
 		return artRep.findAll();
 	}
-	
 }

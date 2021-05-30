@@ -46,7 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		//http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
-		
+		http.csrf().disable();
 		http.cors().and().authorizeRequests().antMatchers(
 				 "/registration**",
 	                "/js/**",
