@@ -21,9 +21,11 @@ public class ListarListasController {
 
 	@Autowired
 	private RepositorioLista listaRep;
+	
 
 	@GetMapping("/mostrar")
-	public List<ListaDto> getAllCancion(){
+	public List<ListaDto> getListas(){
 		return listaRep.findByNombreLista();
 	}
+	
 }
