@@ -12,7 +12,7 @@ import com.dev.webthymeleaf.entidades.Lista_repro;
 
 @Repository
 public interface RepositorioLista extends JpaRepository<Lista_repro, Long>{
-	@Query(value = "select cancion, nombre_lista from cancion c, lista_repro a, lista_cancion ca where c.id_cancion=ca.id_cancion and ca.id_lista=a.id_lista", nativeQuery = true)
+	@Query(value = "select nombre_lista, id_lista from lista_repro", nativeQuery = true)
     public List<ListaDto> findByNombreLista();
 	
 }
