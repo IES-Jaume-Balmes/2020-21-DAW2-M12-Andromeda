@@ -1,0 +1,23 @@
+{
+  "a": {
+    "title": "A New Orleans Crawfish Boil",
+    "artist": "Unicorn Heads",
+    "length":"9999"
+  },
+  "b": {
+    "title":"Digital Bath",
+    "artist":"Deftones",
+    "length":"9999"
+  },
+  
+  "c": {
+    "title":"Metamorfosissssss",
+    "artist":"BEJO",
+    "length":"9999"
+  },
+  "ids": [
+    "a",
+    "b",
+    "c"
+  ]
+}
