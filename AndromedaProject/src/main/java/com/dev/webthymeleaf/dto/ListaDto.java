@@ -7,4 +7,5 @@ public interface ListaDto {
 	public String getCancion();
 	
 	public Long getId_lista();
+	
 }

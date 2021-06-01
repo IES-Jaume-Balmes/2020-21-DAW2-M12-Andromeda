@@ -1,4 +1,5 @@
 package com.dev.webthymeleaf.controladores;
+
 import com.dev.webthymeleaf.servicios.SendMailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,12 +12,14 @@ public class SendMailController {
 
     @Autowired
     private SendMailService sendMailService;
-
+    
+    /*Devuelve el formulario del mail de contacto*/
     @GetMapping("/mail")
     public String index(){
         return "send_mail_view";
     }
-
+    
+    /*Guarda el cuerpo del mensaje y se lo envia a andromedadaw@gmail.com*/
     @PostMapping("/sendMail")
     public String sendMail(@RequestParam("name") String name, @RequestParam("mail") String mail, @RequestParam("subject") String subject, @RequestParam("body") String body){
 

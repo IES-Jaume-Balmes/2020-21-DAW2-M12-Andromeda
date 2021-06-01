@@ -1,5 +1,7 @@
 package com.dev.webthymeleaf.entidades;
 
+/*Esta és la entidad que verifica los datos que se pasan mediante POST
+ *en el momento en el que el usuario añade una canción a su lista ya creada*/
 public class IdCancionLista {
 
 	private Long id_cancion;
@@ -27,6 +29,5 @@ public class IdCancionLista {
 	public void setId_lista(Long id_lista) {
 		this.id_lista = id_lista;
 	}
-	
 	
 }

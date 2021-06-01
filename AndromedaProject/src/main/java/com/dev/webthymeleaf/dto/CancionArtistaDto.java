@@ -11,4 +11,5 @@ public interface CancionArtistaDto {
 	public String getUrl();
 	
 	public Long getId_cancion();
+	
 }

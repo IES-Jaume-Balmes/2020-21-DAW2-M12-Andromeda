@@ -21,6 +21,7 @@ import javax.persistence.JoinColumn;
 
 @Entity
 @Table(name =  "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+
 public class User {
 	
 	@Id
@@ -37,7 +38,8 @@ public class User {
 	
 	private String password;
 	
-	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	/*Relación many to many entre user_id y role_id*/
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)    
 	@JoinTable(
 			name = "users_roles",
 			joinColumns = @JoinColumn(

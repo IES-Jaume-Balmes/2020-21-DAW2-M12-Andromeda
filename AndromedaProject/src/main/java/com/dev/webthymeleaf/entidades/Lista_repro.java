@@ -1,9 +1,6 @@
 package com.dev.webthymeleaf.entidades;
 
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,11 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.TemporalType;
-import javax.xml.crypto.Data;
-
-import org.springframework.data.jpa.repository.Temporal;
 
 @Entity
 public class Lista_repro {
@@ -28,13 +20,13 @@ public class Lista_repro {
 
 	private String nombre_lista;
 
-
-
+	/*Relacion many to many entre id_usuario y id_cancion*/
 	@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH,
 			CascadeType.PERSIST }, fetch = FetchType.LAZY)
 	@JoinTable(name = "LISTA_DETALLE", joinColumns = @JoinColumn(name = "id_lista"), inverseJoinColumns = @JoinColumn(name = "id_usuario"))
 	private List<User> usuarios;
 
+	/*Relacion many to many entre id_lista y id_cancion*/
 	@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH,
 			CascadeType.PERSIST }, fetch = FetchType.LAZY)
 	@JoinTable(name = "LISTA_CANCION", joinColumns = @JoinColumn(name = "id_lista"), inverseJoinColumns = @JoinColumn(name = "id_cancion"))
@@ -43,13 +35,12 @@ public class Lista_repro {
 	public Lista_repro(String nombre_lista) {
 		super();
 		this.nombre_lista = nombre_lista;
-		
 	}
 
 	public Lista_repro(String nombre_lista, List<User> usuarios, List<Cancion> canciones) {
 		super();
 		this.nombre_lista = nombre_lista;
-		
+
 		this.usuarios = usuarios;
 		this.canciones = canciones;
 	}
@@ -74,10 +65,6 @@ public class Lista_repro {
 		this.nombre_lista = nombre_lista;
 	}
 
-
-
-
-
 	public List<User> getUsuarios() {
 		return usuarios;
 	}
@@ -96,8 +83,7 @@ public class Lista_repro {
 
 	@Override
 	public String toString() {
-		return "Lista_repro [id_lista=" + id_lista + ", nombre_lista=" + nombre_lista + ", data_creacion="
-				 + "]";
+		return "Lista_repro [id_lista=" + id_lista + ", nombre_lista=" + nombre_lista + ", data_creacion=" + "]";
 	}
 
 }
