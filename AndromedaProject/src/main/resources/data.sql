@@ -4,7 +4,7 @@ INSERT INTO `cancion` (`id_cancion`, `cancion`, `genero`, `url`) VALUES
 (3, 'Elite', 'Rock', '/media/Elite - Deftones.mp3'),
 (4, 'RX Queen', 'Rock', '/media/RXQUEEN - Deftones.mp3'),
 (5, 'Street Carp', 'Rock', '/media/Street Carp - Deftones.mp3'),
-(6, 'Teenager', 'Rock', '/media/Teenager - Deftones'),
+(6, 'Teenager', 'Rock', '/media/Teenager - Deftones.mp3'),
 (7, 'Knife Party', 'Rock', '/media/KnifeParty - Deftones.mp3'),
 (8, 'Korea', 'Rock', '/media/Korea - Deftones.mp3'),
 (9, 'Passenger', 'Rock', '/media/Passenger - Deftones.mp3'),
