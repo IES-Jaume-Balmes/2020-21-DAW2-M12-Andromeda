@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ANDROMEDA</title>
+
+  <!--NAV-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+  <!--JAVASCRIPT-->
+  <script src="javascript/mainBody.js"></script>
+  <script src="javascript/sidebar.js"></script>
+  <script src="javascript/detectaId.js"></script>
+  <script src="javascript/añadirLista.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="javascript/script.js"></script>
+  </div>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="cover.css" />
+  <link href="min.css" rel="stylesheet" />
+  <link href="cover.css" rel="stylesheet" />
+  <link href="animation.css" rel="stylesheet" />
+</head>
+
+<body onload="startProject()">
+
+    <!-- NAV -->
+  <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+			</div>
+		</div>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+		    <div class="container">
+		    	<a class="navbar-brand" href="index.html">Música Andrómeda</a>
+		    	<div class="social-media order-lg-last">
+		    		<p class="mb-0 d-flex">
+              <a href="https://twitter.com/_AndromedaMusic" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+		    		</p>
+	        </div>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav ml-auto mr-md-3">
+		        	<li class="nav-item active"><a href="http://localhost:8080/" class="nav-link">Home</a></li>
+		          <li class="nav-item"><a href="http://localhost:8080/login?logout" class="nav-link">Salir</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+    
+    <!-- ANIMATION -->
+   <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+  <div id="sidebar">
+    <a href="http://localhost:8080/lista/newList">
+      <button type="button" class="btn btn-danger">Crear lista</button>
+    </a>
+  </div>
+
+  <div id="listado">
+    <script>
+      function startProject() {
+        loadDoc();
+        cargarListas();
+      }
+    </script>
+  </div>
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <label for="lista">Escoge una lista:</label>
+
+      <select name="lista" id="lista" onchange="obtenId()">
+        <option disabled selected value> -- Escoge una lista -- </option>
+      </select>
+
+      <form action="http://localhost:8080" id="formulario"></form>
+
+    </div>
+
+
+    <!--<iframe src="http://localhost:8080/lista/newList" frameborder="0"></iframe>-->
+</body>
+
+</html>
