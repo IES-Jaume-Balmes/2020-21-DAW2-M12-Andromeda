@@ -1,6 +1,6 @@
 # Andrómeda
 
-_Andrómeda és una aplicación web de música dónde los usuarios podran escuchar su música favorita, crear listas de canciones y compartirla con amigos._
+_Andrómeda és una aplicación web de música dónde los usuarios podran escuchar su música favorita y crear listas de canciones._
 
 
 ## Construido con 🛠️
