@@ -1,4 +1,4 @@
-package com.dev.webthumeleaf.dto;
+package com.dev.webthymeleaf.dto;
 
 public class UserRegistrationDto {
 	private String firstName;

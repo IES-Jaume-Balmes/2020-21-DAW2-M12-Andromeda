@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.dev.webthumeleaf.dto.CancionArtistaDto;
-import com.dev.webthumeleaf.dto.ListaDto;
+import com.dev.webthymeleaf.dto.CancionArtistaDto;
+import com.dev.webthymeleaf.dto.ListaDto;
 import com.dev.webthymeleaf.entidades.Lista_repro;
 
 @Repository

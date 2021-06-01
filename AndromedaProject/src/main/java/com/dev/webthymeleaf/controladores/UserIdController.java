@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dev.webthumeleaf.dto.UserDto;
 import com.dev.webthymeleaf.dao.UserRepository;
+import com.dev.webthymeleaf.dto.UserDto;
 @CrossOrigin(origins = "http://127.0.0.1:5500")
 @RequestMapping(value = "/user", method = { RequestMethod.GET, RequestMethod.PUT,
 		RequestMethod.HEAD, RequestMethod.POST })

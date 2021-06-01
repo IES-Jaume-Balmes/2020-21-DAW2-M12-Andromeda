@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import com.dev.webthymeleaf.entidades.Role;
 import com.dev.webthymeleaf.entidades.User;
 import com.dev.webthymeleaf.dao.UserRepository;
-import com.dev.webthumeleaf.dto.UserRegistrationDto;
+import com.dev.webthymeleaf.dto.UserRegistrationDto;
 
 @Service
 public class UserServiceImpl implements UserService{

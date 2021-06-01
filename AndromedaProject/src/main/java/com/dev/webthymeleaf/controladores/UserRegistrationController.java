@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.dev.webthymeleaf.dto.UserRegistrationDto;
 import com.dev.webthymeleaf.servicios.UserService;
-import com.dev.webthumeleaf.dto.UserRegistrationDto;
 
 @Controller
 @RequestMapping("/registration")

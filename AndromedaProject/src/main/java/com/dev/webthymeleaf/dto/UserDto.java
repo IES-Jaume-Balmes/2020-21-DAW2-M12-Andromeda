@@ -1,4 +1,4 @@
-package com.dev.webthumeleaf.dto;
+package com.dev.webthymeleaf.dto;
 
 public interface UserDto {
 	public Long getId();

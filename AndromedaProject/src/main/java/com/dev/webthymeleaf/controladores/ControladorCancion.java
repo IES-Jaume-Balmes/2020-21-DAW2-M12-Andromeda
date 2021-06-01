@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dev.webthumeleaf.dto.CancionArtistaDto;
 import com.dev.webthymeleaf.dao.RepositorioArtista;
 import com.dev.webthymeleaf.dao.RepositorioCancion;
+import com.dev.webthymeleaf.dto.CancionArtistaDto;
 import com.dev.webthymeleaf.entidades.Artista;
 import com.dev.webthymeleaf.entidades.Cancion;
 
