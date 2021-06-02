@@ -1,4 +1,4 @@
-var otraId;
+//var otraId; creo que borrar
 
 function anadirLista() {
   
@@ -12,18 +12,25 @@ function anadirLista() {
     var span = document.getElementsByClassName("close")[0];
   
     // When the user clicks the button, open the modal 
+    //También asigna al formulario de envio de datos la id de la cancion en un input
+    
     for (let index = 0; index < btn.length; index++) {
     btn[index].onclick = function () {
       var id=this.children[1];
-      var form = document.getElementById("formulario");
+      
+      var form = document.getElementById("formulario");/*obtenemos el formulario*/ 
       var idCan = document.createElement("input");
       idCan.setAttribute("hidden",true);
-      idCan.setAttribute("value",id.textContent);
+     
+      var transf = document.createTextNode(id.textContent);/*le hacemos append child al formulario 
+                                                           con el input y el valor deseado*/ 
+      idCan.appendChild(transf);
       form.appendChild(idCan);
-         //console.log(this.children[1]);  
+          
         modal.style.display = "block";
       } 
     }
+
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
       modal.style.display = "none";
@@ -35,7 +42,8 @@ function anadirLista() {
       }
   
     }
-   /////////////////////////////////////////////////////////////////
+  /*Este ajax crea una select box cargando en sus options las listas existentes
+  para así selecionarlas y mandarlas al form de envio de datos*/ 
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -63,7 +71,7 @@ function anadirLista() {
 
       creaForm();
     }
-
+/*Obtiene la id de la  opcion seleccionada en un select box de listas*/ 
     function obtenId(){
 
         var idCancion = document.createElement("input");
@@ -73,16 +81,19 @@ function anadirLista() {
            ids.addEventListener('change',detectaId);
             
             var resultado = ids;
-            idCancion.setAttribute("value",resultado.value);
+           
+           var transf = document.createTextNode(resultado.value); 
 
-            var inputSubmit = document.createElement("input");
-            inputSubmit.setAttribute("type","submit");
+          idCancion.appendChild(transf);
+
+           
             
             var form = document.getElementById("formulario");
             form.appendChild(idCancion);
             
     }
 
+    /*Añade un boton de envio al formulario de datos*/ 
     function creaForm(){
       var form = document.getElementById("formulario");
 
