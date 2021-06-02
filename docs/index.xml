@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentacion on Andrómeda</title>
+    <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/</link>
+    <description>Recent content in Documentacion on Andrómeda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-es</language><atom:link href="https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arquitectura de la aplicación</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/2_arquitectura/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/2_arquitectura/</guid>
+      <description>Imagen arquitectura de la aplicación.</description>
+    </item>
+    
+    <item>
+      <title>Arquitectura final</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/arquitectura/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/arquitectura/</guid>
+      <description>Arquitectura final</description>
+    </item>
+    
+    <item>
+      <title>Back: Spring Boot</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/1_back/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/1_back/</guid>
+      <description> Creación de todas las entidades: Usuario, Cancion, Artista, Lista_repro. Controlador Registro. Controlador Login (en desarrollo). Repositorio de la clase Usuario. Creación del registro y login (en desarrollo). Spring security: se ha creado el archivo de configuración que cifra usuario y admin (en desarrollo).  </description>
+    </item>
+    
+    <item>
+      <title>Back: Spring Boot</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/1_back2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/1_back2/</guid>
+      <description> Creación de la rest api para mostrar las canciones en formato json. En desarrollo aplicar la seguridad a login y registro.  </description>
+    </item>
+    
+    <item>
+      <title>Back: Spring Boot</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/1_back2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/1_back2/</guid>
+      <description>Arreglado: modificada la query que proporciona la información de la api, no se podían filtar todos los datos. Arreglado: modificado repositorio canción añadido anotación jsonIgnore, para evitar que los valores se multipliquen en la consultas a la base de datos. Arreglado: ahora el registro de usuarios y el login funcionan correctamente. Control de errores en el login: añadido notificacion al introducir credenciales erroneas. Login: añadido mensaje al iniciar sesión en la página.</description>
+    </item>
+    
+    <item>
+      <title>Back: Spring Boot</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/1_back2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/1_back2/</guid>
+      <description> Creación de la api para verificar la sesión que hay activa. Mapeo de Post para recibir cuando se introduce una cancion en una lista. Creación de la api que muestra las listas existentes en la base de datos. Creación de la página de contacto con la web. Modificado css de la página añadir lista. Modificado css de la página principal. Añadido comentarios en todo el codigo.  </description>
+    </item>
+    
+    <item>
+      <title>Conclusión final</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/conclusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/conclusion/</guid>
+      <description> Curva de aprendizaje con Spring demasiado elevada pa un primer proyecto. Creemos que podría haver sido más fácil utilizando otro frameword distinto. Muchos problemas con cors que no han sido solucionados ni con la ayuda de los profesores, por eso nos hemos visto limitados para desarrollar otras funcionalidades.  </description>
+    </item>
+    
+    <item>
+      <title>Diagrama de clases</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/2_diagrama/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/2_diagrama/</guid>
+      <description>Base de datos</description>
+    </item>
+    
+    <item>
+      <title>Diagrama de clases</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/2_diagrama2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/2_diagrama2/</guid>
+      <description>Base de datos</description>
+    </item>
+    
+    <item>
+      <title>Diagrama de clases</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/2_diagrama2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/2_diagrama2/</guid>
+      <description>Base de datos
+ No hay modificaciones en la base de datos.  </description>
+    </item>
+    
+    <item>
+      <title>Diagrama de clases</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/2_diagrama2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/2_diagrama2/</guid>
+      <description>Base de datos
+ No hay modificaciones en la base de datos.  </description>
+    </item>
+    
+    <item>
+      <title>Diseños finales</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/dise%C3%B1os/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/dise%C3%B1os/</guid>
+      <description>Links a los diseños finales del proyecto.  Página principal
+Página inicio de sesión
+Página registro de usuarios
+Página de contacto
+Página mi música
+Página añadir lista propia</description>
+    </item>
+    
+    <item>
+      <title>Front: Bootstrap</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/frontbootstrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/frontbootstrap/</guid>
+      <description> Landing page con css (Responsive). Registro con css. Login con css.  </description>
+    </item>
+    
+    <item>
+      <title>Front: Bootstrap</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/frontbootstrap2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/frontbootstrap2/</guid>
+      <description> Sin cambios durante la semana.  </description>
+    </item>
+    
+    <item>
+      <title>Front: Bootstrap</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/frontbootstrap2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/frontbootstrap2/</guid>
+      <description> Añadido css para el front.  </description>
+    </item>
+    
+    <item>
+      <title>Front: Bootstrap</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/frontbootstrap2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/frontbootstrap2/</guid>
+      <description> Añadido css para el front (mi música). Añadido: el css és responsive.  </description>
+    </item>
+    
+    <item>
+      <title>Front: React</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/front/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/front/</guid>
+      <description> Pendiente de desarrollo.  </description>
+    </item>
+    
+    <item>
+      <title>Front: React</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/front2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/front2/</guid>
+      <description> Creación del buscador: filtra las canciones por genero y nombre.  </description>
+    </item>
+    
+    <item>
+      <title>Front: React</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/front2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/front2/</guid>
+      <description>Añadidas 75 canciones mp3 a la carpeta media. Favoritos: creación del apartado donde el usuario podrá añadir sus canciones preferidas. Favoritos: ahora el usuario podrá además de añadir eliminar las canciones que quiera en este apartado. Añadido: ahora el usuario podrá añadir las canciones a una o varias listas propias. Añadido: reproductor de música. Lista de canciones: por el momento solo funciona la reprodución de canciones introducidas a mano en el archivo media, pendiente conectar con nuestra api para poder listar todas las canciones.</description>
+    </item>
+    
+    <item>
+      <title>Front: React</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/front2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/front2/</guid>
+      <description> Descartado el front con react, no ha sido posible implementarlo en el proyecto, cambiado por un front nativo. Añadido: lista de todas las canciones. Añadido: las canciones se pueden reproducir y descargar. Añadido: se pueden crear listas propias y guardarlas en la base de datos.  </description>
+    </item>
+    
+    <item>
+      <title>Funcionamiento</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/4_funcionamiento/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/4_funcionamiento/</guid>
+      <description>Dos perfiles de usuario, el normal y el administrador. Usuario: Registro: el usuario podrá registrarse. Baja: el usuario podrá darse de baja del servicio. Login: una vez registrado puede loguearse. Logout: un usuario puede desconectarse. El usuario podrá acceder a su panel de control. Red social de Andrómeda embedded. Correo electrónico al completar el registro. Música: Buscar: el usuario puede buscar canciones. Crear: un usuario puede subir música a Andrómeda.</description>
+    </item>
+    
+    <item>
+      <title>Herramientas</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/1_herramientas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter1/1_herramientas/</guid>
+      <description>  Spring - Backend.
+  React - Frontend.
+  HTML/CSS - Bootstrap (landing page).
+  MYSQL - Base de datos.
+  CAPACITOR - Aplicación Android.
+  Documentación del Proyecto - Hugo https://gohugo.io/
+  Presentación del Proyecto - https://revealjs.com/
+  </description>
+    </item>
+    
+    <item>
+      <title>Propuesta de desarrollo futuro</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/propuesta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/propuesta/</guid>
+      <description> Implementar el usuario admin. Añadir más funcionalidad a las listas. Implementación en cordova.  </description>
+    </item>
+    
+    <item>
+      <title>SQL: Spring Hibernate</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/sql_spring-hibernate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter2/sql_spring-hibernate/</guid>
+      <description>  Creación de las tablas:
+ Artista. Canción. lista_repro. lista_detalle.    Creada la relacion entre la tabla artista y canción.
+  </description>
+    </item>
+    
+    <item>
+      <title>SQL: Spring Hibernate</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/sql_spring-hibernate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter3/sql_spring-hibernate/</guid>
+      <description> Migración de la base de datos de h2-console a phpmyadmin.  </description>
+    </item>
+    
+    <item>
+      <title>SQL: Spring Hibernate</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/sql_spring-hibernate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapter4/sql_spring-hibernate/</guid>
+      <description> Añadidas 75 inserts de canciones en el archivo data.sql  </description>
+    </item>
+    
+    <item>
+      <title>SQL: Spring Hibernate</title>
+      <link>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/sql_spring-hibernate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ies-jaume-balmes.github.io/2020-21-DAW2-M12-Andromeda/chapterfinal/sql_spring-hibernate/</guid>
+      <description> Corregido las url de algunas canciones.  </description>
+    </item>
+    
+  </channel>
+</rss>
