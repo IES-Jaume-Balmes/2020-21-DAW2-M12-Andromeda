@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/serif.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Andrómeda</h1>
+                <p>Andrómeda es una aplicación web que permite a los usuarios encontrar su música favorita</p>
+            </section>
+            <section>
+                <h2>1. Tecnologías</h1>
+                    <img src="/img/diagrama.png"></img>
+            </section>
+            <section>
+                <h2>2. Base de datos</h1>
+                    <p>De H2 a MYSQL -> Persistencia</p>
+                    <p>Relacional</p>
+            </section>
+            <section>
+                <h4>2.1. Diagrama de la base de datos</h2>
+                    <img src="img/diagram.png"></img>
+            </section>
+            <section>
+                <h4>2.2 Entidades</h4>
+            </section>
+            <section>
+                <h4>2.2.1. Entidad artista</h2>
+                    <pre><code data-trim data-noescape>
+						@Entity
+						public class Artista {
+						
+							@Id
+							@GeneratedValue(strategy = GenerationType.IDENTITY)
+						
+							private long id_artista;						
+							private String artista;
+							@ManyToMany(mappedBy = "artistas")
+							@JsonIgnore
+							private List<Cancion> canciones;		
+					</code></pre>
+            </section>
+            <section>
+                <h4>2.2.2. Entidad canción</h2>
+                    <pre><code data-trim data-noescape>
+						@Entity
+
+		public class Cancion {
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+			private long id_cancion;
+			private String url;
+			private String cancion;
+			private String genero;
+
+   		@ManyToMany(cascade = { CascadeType.DETACH, 
+            CascadeType.MERGE, 
+            CascadeType.REFRESH,
+            CascadeType.PERSIST }, 
+            fetch = FetchType.LAZY)
+
+		@JoinTable(name = "CANCION_ARTISTA", 
+			joinColumns = @JoinColumn(name = "id_cancion"), 
+			inverseJoinColumns = @JoinColumn(name = "id_artista"))
+		@JsonIgnore
+			private List<Artista> artistas;	
+					</code></pre>
+            </section>
+            <section>
+                <h4>2.2.3. Entidad usuario</h2>
+                    <pre><code data-trim data-noescape>
+		@Entity
+		@Table(name =  "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+		public class User {
+
+			@Id
+			@GeneratedValue(strategy =  GenerationType.IDENTITY)
+			private Long id;
+
+			@Column(name = "first_name")
+			private String firstName;
+
+			@Column(name = "last_name")
+			private String lastName;
+
+			private String email;
+			private String password;
+
+			@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+			@JoinTable(
+					name = "users_roles",
+					joinColumns = @JoinColumn(
+					name = "user_id", referencedColumnName = "id"),
+					inverseJoinColumns = @JoinColumn(
+					name = "role_id", referencedColumnName = "id"))
+
+			private Collection<Role> roles;
+
+			@ManyToMany(mappedBy = "canciones")
+			
+			@JsonIgnore
+			private List<Lista_repro> lista;
+					</code></pre>
+            </section>
+            <section>
+                <h4>2.2.4. Entidad lista de reprodución</h2>
+                    <pre><code data-trim data-noescape>
+				@Entity
+				public class Lista_repro {
+
+				@Id
+				@GeneratedValue(strategy = GenerationType.IDENTITY)
+				private long id_lista;
+
+				private String nombre_lista;
+
+				@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH,
+				CascadeType.PERSIST }, fetch = FetchType.LAZY)
+				
+				@JoinTable(name = "LISTA_DETALLE", joinColumns = @JoinColumn(name = "id_lista"), inverseJoinColumns = @JoinColumn(name = "id_usuario"))
+				private List<User> usuarios;
+
+				@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH,
+				CascadeType.PERSIST }, fetch = FetchType.LAZY)
+				
+				@JoinTable(name = "LISTA_CANCION", joinColumns = @JoinColumn(name = "id_lista"), inverseJoinColumns = @JoinColumn(name = "id_cancion"))
+				private List<Cancion> canciones;	
+					</code></pre>
+            </section>
+            <section>
+                <h2>3. Registro de usuarios/inicio de sesión</h2>
+            </section>
+            <section>
+                <h2>3.1. Registro de usuarios</h2>
+                <img src="/img/Registro.png"></img>
+            </section>
+            <section>
+                <h4>3.1.1 Model</h4>
+                <img src="/img/model.png"></img>
+            </section>
+            <section>
+                <h4>3.1.2 Controlador de registro: model</h2>
+                    <pre><code data-trim data-noescape>
+						@ModelAttribute("user")
+						public UserRegistrationDto userRegistrationDto() {
+							return new UserRegistrationDto();
+						}
+					</code></pre>
+            </section>
+            <section>
+                <h4>3.1.3 Controlador de registro: 1. guardar</h2>
+                    <pre><code data-trim data-noescape>
+					
+					@PostMapping
+					public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
+						userService.save(registrationDto);
+						return "redirect:/registration?success";
+					}
+				</code></pre>
+            </section>
+
+            <section>
+                <h4>3.1.4 Controlador de registro: 2. cifrar</h2>
+                    <pre><code data-trim data-noescape>
+                	@Override
+					public User save(UserRegistrationDto registrationDto) {
+					User user = new User(registrationDto.getFirstName(), 
+					registrationDto.getLastName(), registrationDto.getEmail(),
+					passwordEncoder.encode(registrationDto.getPassword()), 
+					Arrays.asList(new Role("ROLE_USER")));
+					return userRepository.save(user);
+                   }
+				</code></pre>
+            </section>
+
+            <section>
+                <h4>3.2. Inicio de sesión</h4>
+                <img src="/img/login.png"></img>
+            </section>
+            <section>
+                <h4>3.2.1 Carga del usuario </h4>
+                <pre><code data-trim data-noescape>
+						@Override
+						public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+					
+							User user = userRepository.findByEmail(username);
+							if (user == null) {
+								throw new UsernameNotFoundException("Invalid username or password.");
+							}
+							return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
+									mapRolesToAuthorities(user.getRoles()));
+						}
+				</code></pre>
+            </section>
+            <section>
+                <h4>3.2.2 Controlador: inicio de sesión</h2>
+                    <pre><code data-trim data-noescape>
+					@GetMapping(value = "/username")
+					@ResponseBody
+					public Object currentUserName(Authentication authentication) {
+				
+						if (authentication != null) {
+							System.out.println(authentication.getName());
+				
+							return authentication.getDetails();
+						}
+						else
+							return "";
+					}
+				
+					@PostMapping
+					public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
+						userService.save(registrationDto);
+						return "redirect:/registration?success";
+					}
+				</code></pre>
+            </section>
+            <section>
+                <h4>4. Configuración de seguridad</h2>
+            </section>
+            <section>
+                <h4>4.1 Configuración</h2>
+                    <pre><code data-trim data-noescape>
+						@Override
+						protected void configure(HttpSecurity http) throws Exception {
+					
+							http
+							  .httpBasic().and()
+							  .authorizeRequests()
+								.antMatchers(HttpMethod.POST, "/lista").hasRole("USER")
+								.antMatchers(HttpMethod.PUT, "/lista/").hasRole("USER")
+								.antMatchers(HttpMethod.PATCH, "/lista/").hasRole("USER");
+							http.csrf().disable();
+							http.cors().and().authorizeRequests().antMatchers(
+									 "/registration",
+										"/js/",
+										"/css/",
+										"/img/",
+										"/lista/",
+										"/api/").permitAll()
+							.anyRequest().authenticated()
+							.and()
+							.formLogin()
+							.loginPage("/login")
+							.permitAll()
+							.and()
+							.logout()
+							.invalidateHttpSession(true)
+							.clearAuthentication(true)
+							.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+							.logoutSuccessUrl("/login?logout")
+							.permitAll();
+						}
+					}
+				</code></pre>
+            </section>
+            <section>
+                <h2>5. Apis</h2>
+                <img src="/img/ejemploApi.png"></img>
+
+            </section>
+            <section>
+                <h4>5.1 Api canción y artistas</h2>
+                    <pre><code data-trim data-noescape>
+						
+				@CrossOrigin(origins = "http://127.0.0.1:5500)
+				@RestController
+				@RequestMapping(value = "/api", produces = "application/json", method = { RequestMethod.GET, RequestMethod.PUT,
+						RequestMethod.HEAD, RequestMethod.POST })
+
+				public class ControladorCancion {
+
+					@Autowired
+					private RepositorioCancion cancRep;
+
+					@GetMapping("/canciones")
+					public List<CancionArtistaDto> getAllCancion() {
+						return cancRep.findByCancionArtistaDtos();
+					}
+
+					@Autowired
+					private RepositorioArtista artRep;
+
+					@GetMapping("/artistas")
+					public List<Artista> getAllartista() {
+						return artRep.findAll();
+					}
+				}
+				</code></pre>
+            </section>
+            <section>
+                <h4>5.2 Api de usuarios</h2>
+                    <pre><code data-trim data-noescape>
+						
+				@CrossOrigin(origins = "http://127.0.0.1:5500)
+				@RestController
+				@RequestMapping(value = "/api", produces = "application/json", method = { RequestMethod.GET, RequestMethod.PUT,
+				RequestMethod.HEAD, RequestMethod.POST })
+
+				public class ControladorCancion {
+
+					@Autowired
+					private RepositorioCancion cancRep;
+
+					@GetMapping("/canciones")
+					public List<CancionArtistaDto> getAllCancion() {
+						return cancRep.findByCancionArtistaDtos();
+					}
+
+					@Autowired
+					private RepositorioArtista artRep;
+
+					@GetMapping("/artistas")
+					public List<Artista> getAllartista() {
+						return artRep.findAll();
+					}
+				}
+				</code></pre>
+            </section>
+            <section>
+                <h4>5.3 Api listas de canciones</h2>
+                    <pre><code data-trim data-noescape>
+						
+				@CrossOrigin(origins = "http://127.0.0.1:5500)
+				@RestController
+				@RequestMapping(value = "/api", produces = "application/json", method = { RequestMethod.GET, RequestMethod.PUT,
+				RequestMethod.HEAD, RequestMethod.POST })
+
+				public class ControladorCancion {
+
+					@Autowired
+					private RepositorioCancion cancRep;
+
+					@GetMapping("/canciones")
+					public List<CancionArtistaDto> getAllCancion() {
+						return cancRep.findByCancionArtistaDtos();
+					}
+
+					@Autowired
+					private RepositorioArtista artRep;
+
+					@GetMapping("/artistas")
+					public List<Artista> getAllartista() {
+						return artRep.findAll();
+					}
+				}
+				</code></pre>
+            </section>
+            <section>
+                <h4>5.4 Repositorio canción</h2>
+                    <pre><code data-trim data-noescape>					
+						@Repository
+						public interface RepositorioCancion extends JpaRepository<Cancion, Long> {
+							@Query(value = "select cancion, artista, genero, url, c.id_cancion from cancion c, artista a, cancion_artista ca where c.id_cancion=ca.id_cancion and ca.id_artista=a.id_artista order by c.cancion;", nativeQuery = true)
+							public List<CancionArtistaDto> findByCancionArtistaDtos();
+						
+							@Query(value = "select c.id_cancion, a.id_lista from cancion c, lista_repro a, lista_cancion ca where c.id_cancion=ca.id_cancion and ca.id_lista=a.id_lista", nativeQuery = true)
+							public List<IdListaCancionDto> findByIds();
+						}
+				</code></pre>
+            </section>
+            <section>
+                <h4>5.5 Dto de canción y artista</h2>
+                    <pre><code data-trim data-noescape>	
+                @Repository
+				public interface RepositorioCancion extends JpaRepository<Cancion, Long> {
+    			@Query(value = "select cancion, artista, genero, url, c.id_cancion from [...]
+				
+   				public List<CancionArtistaDto> findByCancionArtistaDtos();
+
+   				@Query(value = "select c.id_cancion, a.id_lista from cancion c, [...]
+    			public List<IdListaCancionDto> findByIds();
+
+				</code></pre>
+            </section>
+            <section>
+                <h2>6. Contáctanos</h2>
+                <img src="/img/contacto.png"></img>
+            </section>
+            <section>
+                <h4>6.1 Servicio correo </h4>
+                <pre><code data-trim data-noescape>
+						
+						/*Servicio que implementa una interfaz de spring para enviar un mensaje a un correo de la app*/
+						@Service
+						public class SendMailService {
+						
+							@Autowired
+							private JavaMailSender javaMailSender;
+						
+							public void sendMail(String from, String to, String subject, String body) {
+						
+								SimpleMailMessage mailMessage = new SimpleMailMessage();
+						
+								mailMessage.setFrom(from);
+								mailMessage.setTo(to);
+								mailMessage.setSubject(subject);
+								mailMessage.setText(body);
+						
+								javaMailSender.send(mailMessage);
+							}
+						}
+				</code></pre>
+            </section>
+            <section>
+                <h4>6.2 Controlador de contacto </h4>
+                <pre><code data-trim data-noescape>
+					@Controller
+					public class SendMailController {
+					
+						@Autowired
+						private SendMailService sendMailService;
+					
+						/Devuelve el formulario del mail de contacto/
+						@GetMapping("/mail")
+						public String index(){
+							return "send_mail_view";
+						}
+					
+						/Guarda el cuerpo del mensaje y se lo envia a andromedadaw@gmail.com/
+						@PostMapping("/sendMail")
+						public String sendMail(@RequestParam("name") String name, @RequestParam("mail") String mail, @RequestParam("subject") String subject, @RequestParam("body") String body){
+					
+							String message = body +"\n\n Datos de contacto: " + "\nNombre: " + name + "\nE-mail: " + mail;
+							sendMailService.sendMail("andromedadaw@gmail.com", "andromedadaw@gmail.com" ,subject,message);
+					
+							return "index";
+						}
+					}
+				</code></pre>
+            </section>
+            <section>
+                <h2>7. Frontend</h2>
+            </section>
+            <section>
+                <h2>8. Desarrollo futuro </h2>
+                <ul>
+                    <li>Desarrollo del usuario administrador.</li>
+                    <li>Funcionalidad de las listas.</li>
+                    <li>Cordova.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>La aplicación</h2>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
