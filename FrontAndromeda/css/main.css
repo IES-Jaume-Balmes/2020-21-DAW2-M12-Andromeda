@@ -1,8 +1,7 @@
 #listaRepro {
   list-style-type: none;
   display: inline-block;
-  float: right;
-  margin-top: -90px;
+  margin-top: -200px;
   display: block;
   position: sticky;
   text-align: left;
@@ -10,10 +9,12 @@
 #elementosLista{
   border: 1px solid #ddd;
   margin-bottom: 10px;
-  padding: 5px 10px;
+  padding: 10px;
   background: #fafafa;
   display: block;
   border-radius: 7px;
+  margin-left: 20%;
+  text-align: center;
 }
 
 #elementosLista:hover{
@@ -31,7 +32,7 @@
 }
 
 audio{
-  width: 600px;
+  width: 70%;
 }
 
 .myBtn{
@@ -167,5 +168,10 @@ img{
   }
 }
 
+@media (max-width: 800px) {
+  #elementosLista{
+    margin-left: 120px;
+  }
+}
 
 
